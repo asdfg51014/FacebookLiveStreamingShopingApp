@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A11987921F5F0AE0021966E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11987821F5F0AE0021966E /* AppDelegate.swift */; };
+		2A11987E21F5F0AE0021966E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A11987C21F5F0AE0021966E /* Main.storyboard */; };
+		2A11988121F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A11987F21F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld */; };
+		2A11988321F5F0AF0021966E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A11988221F5F0AF0021966E /* Assets.xcassets */; };
+		2A11988621F5F0AF0021966E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A11988421F5F0AF0021966E /* LaunchScreen.storyboard */; };
+		2A11989821F5F8A40021966E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11989721F5F8A40021966E /* Request.swift */; };
+		2A11989A21F60B170021966E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11989921F60B170021966E /* LoginViewController.swift */; };
+		2A11989C21F60CE70021966E /* IdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11989B21F60CE70021966E /* IdentityViewController.swift */; };
+		2AD098DD21F702C5003E9DD0 /* BuyerInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */; };
+		D11823680DBBBF9495C37BC9 /* Pods_FacebookLiveStreamingProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4A93E7622A0F8939F158C2 /* Pods_FacebookLiveStreamingProject.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A11987521F5F0AE0021966E /* FacebookLiveStreamingProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookLiveStreamingProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A11987821F5F0AE0021966E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2A11987D21F5F0AE0021966E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A11988021F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FacebookLiveStreamingProject.xcdatamodel; sourceTree = "<group>"; };
+		2A11988221F5F0AF0021966E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A11988521F5F0AF0021966E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A11988721F5F0AF0021966E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A11989721F5F8A40021966E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		2A11989921F60B170021966E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2A11989B21F60CE70021966E /* IdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityViewController.swift; sourceTree = "<group>"; };
+		2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInformationViewController.swift; sourceTree = "<group>"; };
+		4B143CDA68DC4846CC72FFCC /* Pods-FacebookLiveStreamingProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookLiveStreamingProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookLiveStreamingProject/Pods-FacebookLiveStreamingProject.debug.xcconfig"; sourceTree = "<group>"; };
+		6C4A93E7622A0F8939F158C2 /* Pods_FacebookLiveStreamingProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookLiveStreamingProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CF914F39C0621CB9CDF9E38 /* Pods-FacebookLiveStreamingProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookLiveStreamingProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookLiveStreamingProject/Pods-FacebookLiveStreamingProject.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A11987221F5F0AE0021966E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D11823680DBBBF9495C37BC9 /* Pods_FacebookLiveStreamingProject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A11986C21F5F0AE0021966E = {
+			isa = PBXGroup;
+			children = (
+				2A11987721F5F0AE0021966E /* FacebookLiveStreamingProject */,
+				2A11987621F5F0AE0021966E /* Products */,
+				6DCBAF298573C36B7728186C /* Pods */,
+				BBE0A233B2CBF139CFC7A302 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2A11987621F5F0AE0021966E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A11987521F5F0AE0021966E /* FacebookLiveStreamingProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A11987721F5F0AE0021966E /* FacebookLiveStreamingProject */ = {
+			isa = PBXGroup;
+			children = (
+				2A11987821F5F0AE0021966E /* AppDelegate.swift */,
+				2A11987C21F5F0AE0021966E /* Main.storyboard */,
+				2A11988221F5F0AF0021966E /* Assets.xcassets */,
+				2A11988421F5F0AF0021966E /* LaunchScreen.storyboard */,
+				2A11988721F5F0AF0021966E /* Info.plist */,
+				2A11987F21F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld */,
+				2A11989121F5F3290021966E /* Login */,
+				2A11989621F5F36D0021966E /* Identity */,
+				2AD098DE21F70A10003E9DD0 /* BuyerInformationViewController */,
+				2A11989721F5F8A40021966E /* Request.swift */,
+			);
+			path = FacebookLiveStreamingProject;
+			sourceTree = "<group>";
+		};
+		2A11989121F5F3290021966E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2A11989921F60B170021966E /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2A11989621F5F36D0021966E /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				2A11989B21F60CE70021966E /* IdentityViewController.swift */,
+			);
+			path = Identity;
+			sourceTree = "<group>";
+		};
+		2AD098DE21F70A10003E9DD0 /* BuyerInformationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */,
+			);
+			path = BuyerInformationViewController;
+			sourceTree = "<group>";
+		};
+		6DCBAF298573C36B7728186C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B143CDA68DC4846CC72FFCC /* Pods-FacebookLiveStreamingProject.debug.xcconfig */,
+				6CF914F39C0621CB9CDF9E38 /* Pods-FacebookLiveStreamingProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BBE0A233B2CBF139CFC7A302 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C4A93E7622A0F8939F158C2 /* Pods_FacebookLiveStreamingProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A11987421F5F0AE0021966E /* FacebookLiveStreamingProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A11988A21F5F0AF0021966E /* Build configuration list for PBXNativeTarget "FacebookLiveStreamingProject" */;
+			buildPhases = (
+				C2C0BFC99AA5AAF4EC176B9D /* [CP] Check Pods Manifest.lock */,
+				2A11987121F5F0AE0021966E /* Sources */,
+				2A11987221F5F0AE0021966E /* Frameworks */,
+				2A11987321F5F0AE0021966E /* Resources */,
+				2C32331C5DAE35E4D667B20F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FacebookLiveStreamingProject;
+			productName = FacebookLiveStreamingProject;
+			productReference = 2A11987521F5F0AE0021966E /* FacebookLiveStreamingProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A11986D21F5F0AE0021966E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Albert.C;
+				TargetAttributes = {
+					2A11987421F5F0AE0021966E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 2A11987021F5F0AE0021966E /* Build configuration list for PBXProject "FacebookLiveStreamingProject" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A11986C21F5F0AE0021966E;
+			productRefGroup = 2A11987621F5F0AE0021966E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A11987421F5F0AE0021966E /* FacebookLiveStreamingProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A11987321F5F0AE0021966E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A11988621F5F0AF0021966E /* LaunchScreen.storyboard in Resources */,
+				2A11988321F5F0AF0021966E /* Assets.xcassets in Resources */,
+				2A11987E21F5F0AE0021966E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C32331C5DAE35E4D667B20F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FacebookLiveStreamingProject/Pods-FacebookLiveStreamingProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FacebookLiveStreamingProject/Pods-FacebookLiveStreamingProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2C0BFC99AA5AAF4EC176B9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FacebookLiveStreamingProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A11987121F5F0AE0021966E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A11989A21F60B170021966E /* LoginViewController.swift in Sources */,
+				2A11989C21F60CE70021966E /* IdentityViewController.swift in Sources */,
+				2A11989821F5F8A40021966E /* Request.swift in Sources */,
+				2AD098DD21F702C5003E9DD0 /* BuyerInformationViewController.swift in Sources */,
+				2A11987921F5F0AE0021966E /* AppDelegate.swift in Sources */,
+				2A11988121F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2A11987C21F5F0AE0021966E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A11987D21F5F0AE0021966E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2A11988421F5F0AF0021966E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A11988521F5F0AF0021966E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A11988821F5F0AF0021966E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2A11988921F5F0AF0021966E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A11988B21F5F0AF0021966E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B143CDA68DC4846CC72FFCC /* Pods-FacebookLiveStreamingProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3D3ML6454;
+				INFOPLIST_FILE = FacebookLiveStreamingProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.FacebookLiveStreamingProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A11988C21F5F0AF0021966E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CF914F39C0621CB9CDF9E38 /* Pods-FacebookLiveStreamingProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3D3ML6454;
+				INFOPLIST_FILE = FacebookLiveStreamingProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.FacebookLiveStreamingProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A11987021F5F0AE0021966E /* Build configuration list for PBXProject "FacebookLiveStreamingProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A11988821F5F0AF0021966E /* Debug */,
+				2A11988921F5F0AF0021966E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A11988A21F5F0AF0021966E /* Build configuration list for PBXNativeTarget "FacebookLiveStreamingProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A11988B21F5F0AF0021966E /* Debug */,
+				2A11988C21F5F0AF0021966E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2A11987F21F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2A11988021F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodel */,
+			);
+			currentVersion = 2A11988021F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodel */;
+			path = FacebookLiveStreamingProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2A11986D21F5F0AE0021966E /* Project object */;
+}
