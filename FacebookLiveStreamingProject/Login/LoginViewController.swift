@@ -47,6 +47,7 @@ class LoginViewController: UIViewController {
                     }
                 }
                 connection.start()
+                
             }
         }
     }
