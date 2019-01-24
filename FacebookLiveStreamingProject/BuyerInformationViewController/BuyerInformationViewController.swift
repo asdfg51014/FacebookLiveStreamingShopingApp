@@ -31,6 +31,10 @@ class BuyerInformationViewController: UIViewController {
         
     }
     
+    @IBAction func goBackButton(_ sender: UIButton){
+        navigationController?.popViewController(animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
