@@ -9,6 +9,7 @@ import UIKit
 import FacebookLogin
 import FacebookCore
 import NVActivityIndicatorView
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
     
@@ -74,15 +75,12 @@ class LoginViewController: UIViewController {
 
         Requests.getRequset(api: CommonAPIs.getUserInformation, header: Header.init(token: usertoken).header) { (callBack) in
             DispatchQueue.main.async {
-                if (callBack["result"] as! Int).boolValue {
-                    
+                let json = try? JSON(data: callBack)
+                if let jsonResult = json!["result"].bool {
+                    if jsonResult == true {
+                        self.navigationController?.pushViewController(self.ivc, animated: true)
+                    }
                     self.stopAnimation()
-                    self.navigationController?.pushViewController(self.ivc, animated: true)
-                    print("call back response: \(callBack["response"]!)")
-//                    sendUserInformationDelegate?.sendBuyerInformation(name: callBack["response"]!["name"] as! String, email: callBack["response"]!["email"] as! String, imageURL: callBack["response"]!["avatar"] as! String)
-                } else {
-                    self.stopAnimation()
-//                    self.showErrorAlert()
                 }
             }
         }

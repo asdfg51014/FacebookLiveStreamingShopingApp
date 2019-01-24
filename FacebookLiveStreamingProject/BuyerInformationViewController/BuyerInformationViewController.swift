@@ -46,7 +46,7 @@ class BuyerInformationViewController: UIViewController {
         let addressNib = UINib(nibName: "AddressTableViewCell", bundle: nil)
         tableView.register(addressNib, forCellReuseIdentifier: addressReuseId)
         
-        // Do any additional setup after loading the view.
+        getUserInformation()
     }
     
     override func viewWillLayoutSubviews() {

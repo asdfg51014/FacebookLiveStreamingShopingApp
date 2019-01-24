@@ -133,7 +133,7 @@ struct Requests {
     }
     
     
-    static func getRequset(api: String, header: [String: String], callBack: @escaping ([String: Any]) -> Void){
+    static func getRequset(api: String, header: [String: String], callBack: @escaping (Data) -> Void){
         
         let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api/" + api)
         var urlRequset = URLRequest(url: url!)
@@ -148,29 +148,8 @@ struct Requests {
                 print("error: \(error?.localizedDescription)")
                 return
             }
-            
-            let json = try? JSON(data: data)
-            if let jsonresult = json!["result"].bool {
-                print("jsonresult: \(jsonresult)")
-            }
-            if let jsonResult = json?.dictionaryObject {
-                print("test json: \(jsonResult)")
-            }
-//            if let jsonResult2 = jsonResult!["result"] {
-//
-//            }
-            do {
-                print("real json")
-                let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
-                if let responseJSON = responseJSON as? [String: Any] {
-                    callBack(responseJSON)
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
+            callBack(data)
         }
         task.resume()
     }
-    
-    
 }

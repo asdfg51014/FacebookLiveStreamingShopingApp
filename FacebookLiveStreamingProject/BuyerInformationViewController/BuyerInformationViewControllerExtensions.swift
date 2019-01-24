@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 extension BuyerInformationViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -69,9 +70,20 @@ extension BuyerInformationViewController {
             return
         }
         
-//        Requests.getRequset(api: CommonAPIs.getUserInformation, header: Header.init(token: userToken).header) { (result) in
-//            <#code#>
-//        }
+        Requests.getRequset(api: CommonAPIs.getUserInformation, header: Header.init(token: userToken).header) { (data) in
+            let json = try? JSON(data: data)
+            
+            if json!["result"].bool == true {
+                let result = json!["response"].dictionary
+                let url = URL(string: "\(json!["response"]["avatar"])")
+                let imageData = try? Data(contentsOf: url!)
+                DispatchQueue.main.async {
+                    self.userImageView.image = UIImage(data: imageData!)
+                }
+            }
+            
+        }
     }
+    
     
 }
