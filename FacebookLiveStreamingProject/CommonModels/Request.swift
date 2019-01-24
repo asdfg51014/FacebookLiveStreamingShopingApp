@@ -32,12 +32,12 @@ enum UserDefaultKeys: String {
 //}
 
 struct CommonAPIs {
-    static let updateOrInsertNewToken = "/token"
-    static let getUserInformation = "/users"
+    static let updateOrInsertNewToken = "token"
+    static let getUserInformation = "users"
     let getStreamingItemInformation: String
     
     init(channelId: String) {
-        getStreamingItemInformation = "/streaming-item/\(channelId)"
+        getStreamingItemInformation = "streaming-item/\(channelId)"
     }
 }
 
@@ -107,7 +107,7 @@ struct Requests {
         
         let jsonData = try? JSONEncoder().encode(json)
         
-        let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api/" + api)
+        let url = URL(string: "https://f734edcf.ngrok.io/api/" + api)
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = "POST"
         let header = Header.init(token: token).header
@@ -134,17 +134,17 @@ struct Requests {
     
     static func getRequset(api: String, header: [String: String], callBack: @escaping ([String: Any]) -> Void){
         
-        let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api/" + api)
+        let url = URL(string: "https://f734edcf.ngrok.io/api/" + api)
         var urlRequset = URLRequest(url: url!)
         
         for headers in header {
             urlRequset.addValue(headers.value, forHTTPHeaderField: headers.key)
         }
         urlRequset.httpMethod = "GET"
-        
+        print("ready to request")
         let task = URLSession.shared.dataTask(with: urlRequset) { (data, response, error) in
             guard let data = data, error == nil else {
-                print(error?.localizedDescription)
+                print("error: \(error?.localizedDescription)")
                 return
             }
             do {

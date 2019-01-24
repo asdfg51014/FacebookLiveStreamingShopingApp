@@ -8,12 +8,23 @@
 import UIKit
 import FacebookLogin
 import FacebookCore
+import NVActivityIndicatorView
 
 class LoginViewController: UIViewController {
     
+    var sendUserInformationDelegate: BuyerInformationDelegate?
+    
     var userDefault = UserDefaults.standard
     
+    let fullScreen = UIScreen.main.bounds
+    
     let ivc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IVC")
+    
+    let nvaiView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 3), type: NVActivityIndicatorType.ballClipRotate, color: UIColor.black, padding: 50)
+    
+    let underNvaiView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+    
+    let smallView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width / 4, height: UIScreen.main.bounds.width / 4))
     
     @IBAction func loginButton(_ sender: UIButton){
         let manager = LoginManager()
@@ -30,7 +41,7 @@ class LoginViewController: UIViewController {
                 Requests.post(api: "token", token: token.authenticationToken, expirationDate: token.expirationDate, callBack: { (callResult) in
                     if ((callResult["result"] as? Int)?.boolValue)! {
                         DispatchQueue.main.async {
-                            self.navigationController?.pushViewController(self.ivc, animated: true)
+                            self.judgmentUserDefaultToken(tokenKey: UserDefaultKeys.token.rawValue)
                         }
                     } else {
                         self.showErrorAlert()
@@ -53,18 +64,25 @@ class LoginViewController: UIViewController {
     }
     
     func judgmentUserDefaultToken(tokenKey: String?){
-        
+        startAnimation()
+        print("judgggg")
         guard var usertoken = userDefault.value(forKey: tokenKey!) as? String else {
+            stopAnimation()
             showErrorAlert()
             return
         }
 
-        Requests.getRequset(api: "users", header: Header.init(token: usertoken).header) { (callBack) in
+        Requests.getRequset(api: CommonAPIs.getUserInformation, header: Header.init(token: usertoken).header) { (callBack) in
             DispatchQueue.main.async {
                 if (callBack["result"] as! Int).boolValue {
+                    
+                    self.stopAnimation()
                     self.navigationController?.pushViewController(self.ivc, animated: true)
+                    print("call back response: \(callBack["response"]!)")
+//                    sendUserInformationDelegate?.sendBuyerInformation(name: callBack["response"]!["name"] as! String, email: callBack["response"]!["email"] as! String, imageURL: callBack["response"]!["avatar"] as! String)
                 } else {
-                    self.showErrorAlert()
+                    self.stopAnimation()
+//                    self.showErrorAlert()
                 }
             }
         }
@@ -75,11 +93,14 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         judgmentUserDefaultToken(tokenKey: UserDefaultKeys.token.rawValue)
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        setNVActivityIndicatorView()
     }
 }
-
-
-
+    
 extension Int {
     var boolValue: Bool {return self != 0}
 }
@@ -102,4 +123,37 @@ extension LoginViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    func setNVActivityIndicatorView(){
+        
+        underNvaiView.backgroundColor = UIColor.lightGray
+        underNvaiView.alpha = 0.5
+        underNvaiView.center = view.center
+        view.addSubview(underNvaiView)
+//        underNvaiView.isHidden = true
+        
+        smallView.backgroundColor = UIColor.white
+        smallView.layer.cornerRadius = UIScreen.main.bounds.width / 12
+        smallView.clipsToBounds = true
+        smallView.center = underNvaiView.center
+        view.addSubview(smallView)
+//        smallView.isHidden = true
+
+        nvaiView.center = underNvaiView.center
+        view.addSubview(nvaiView)
+//        nvaiView.isHidden = true
+    }
+    
+    func startAnimation(){
+        underNvaiView.isHidden = false
+        smallView.isHidden = false
+        nvaiView.isHidden = false
+        nvaiView.startAnimating()
+    }
+    
+    func stopAnimation(){
+        underNvaiView.isHidden = true
+        smallView.isHidden = true
+        nvaiView.isHidden = true
+        nvaiView.stopAnimating()
+    }
 }

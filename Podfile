@@ -9,5 +9,6 @@ target 'FacebookLiveStreamingProject' do
   pod 'FacebookLogin'
   pod 'FacebookCore'
   pod 'FacebookShare'
-
+  pod 'NVActivityIndicatorView'
+  pod 'SwiftyJSON'
 end
