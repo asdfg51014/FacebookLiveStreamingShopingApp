@@ -15,6 +15,7 @@
 		2A11989821F5F8A40021966E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11989721F5F8A40021966E /* Request.swift */; };
 		2A11989A21F60B170021966E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11989921F60B170021966E /* LoginViewController.swift */; };
 		2A11989C21F60CE70021966E /* IdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11989B21F60CE70021966E /* IdentityViewController.swift */; };
+		2A4D409C21F9BB6B00F2AC2F /* LoginViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D409B21F9BB6B00F2AC2F /* LoginViewControllerExtensions.swift */; };
 		2AD098DD21F702C5003E9DD0 /* BuyerInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */; };
 		2AD0990721F876A4003E9DD0 /* BuyerInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0990621F876A4003E9DD0 /* BuyerInformationTableViewCell.swift */; };
 		2AD0990921F8812D003E9DD0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0990821F8812D003E9DD0 /* Protocols.swift */; };
@@ -41,6 +42,7 @@
 		2A11989721F5F8A40021966E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		2A11989921F60B170021966E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2A11989B21F60CE70021966E /* IdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityViewController.swift; sourceTree = "<group>"; };
+		2A4D409B21F9BB6B00F2AC2F /* LoginViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerExtensions.swift; sourceTree = "<group>"; };
 		2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInformationViewController.swift; sourceTree = "<group>"; };
 		2AD0990621F876A4003E9DD0 /* BuyerInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInformationTableViewCell.swift; sourceTree = "<group>"; };
 		2AD0990821F8812D003E9DD0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				2A11989921F60B170021966E /* LoginViewController.swift */,
+				2A4D409B21F9BB6B00F2AC2F /* LoginViewControllerExtensions.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				2AD0990721F876A4003E9DD0 /* BuyerInformationTableViewCell.swift in Sources */,
 				2AE5FC3321F982120064B771 /* BuyerInformationViewControllerExtensions.swift in Sources */,
 				2AE5FC3021F963FB0064B771 /* AddressTableViewCell.swift in Sources */,
+				2A4D409C21F9BB6B00F2AC2F /* LoginViewControllerExtensions.swift in Sources */,
 				2A11987921F5F0AE0021966E /* AppDelegate.swift in Sources */,
 				2AE5FC2421F9619B0064B771 /* NameTableViewCell.swift in Sources */,
 				2A11988121F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld in Sources */,

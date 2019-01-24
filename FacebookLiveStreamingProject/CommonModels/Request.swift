@@ -102,7 +102,8 @@ struct Header {
 //}
 
 struct Requests {
-    static func post(api: String, token: String, expirationDate: Date, callBack: @escaping ([String: Any]) -> Void) {
+    
+    static func post(api: String, token: String, expirationDate: Date, callBack: @escaping (Data) -> Void) {
         
         let json: [String: String] = ["expirationDate": "\(expirationDate)"]
         
@@ -122,12 +123,7 @@ struct Requests {
                 print(error?.localizedDescription ?? "No Data")
                 return
             }
-            let json = try? JSON(data: data)
-            print("json: \(json)")
-            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-            if let responseJSON = responseJSON as? [String: Any]{
-                callBack(responseJSON)
-            }
+            callBack(data)
         }
         task.resume()
     }
