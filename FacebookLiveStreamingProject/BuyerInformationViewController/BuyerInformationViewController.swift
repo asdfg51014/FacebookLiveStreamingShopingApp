@@ -10,11 +10,18 @@ import UIKit
 
 class BuyerInformationViewController: UIViewController {
     
+    let nameReuseId = "NameCell"
+    let emailReuseId = "EmailCell"
+    let phoneNumberReuserId = "PhoneNumberCell"
+    let addressReuseId = "AddressCell"
+    
     var userInformation: [String] = []
     
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var userImageView: UIImageView!
+    
+    let userDefault = UserDefaults.standard
     
     @IBAction func confirmButton(_ sender: UIButton){
         
@@ -30,6 +37,14 @@ class BuyerInformationViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
         tableView.delegate = self
         tableView.dataSource = self
+        let nameNib = UINib(nibName: "NameTableViewCell", bundle: nil)
+        tableView.register(nameNib, forCellReuseIdentifier: nameReuseId)
+        let emailNib = UINib(nibName: "EmailTableViewCell", bundle: nil)
+        tableView.register(emailNib, forCellReuseIdentifier: emailReuseId)
+        let phoneNumberNib = UINib(nibName: "PhoneNumberTableViewCell", bundle: nil)
+        tableView.register(phoneNumberNib, forCellReuseIdentifier: phoneNumberReuserId)
+        let addressNib = UINib(nibName: "AddressTableViewCell", bundle: nil)
+        tableView.register(addressNib, forCellReuseIdentifier: addressReuseId)
         
         // Do any additional setup after loading the view.
     }
@@ -41,27 +56,6 @@ class BuyerInformationViewController: UIViewController {
     
 }
 
-extension BuyerInformationViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userInformation.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! BuyerInformationTableViewCell
-        
-        cell.textLabel?.text = "123"
-        return cell
-    }
-    
-    
-    
-    
-}
 
 
 extension BuyerInformationViewController {

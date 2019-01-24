@@ -10,6 +10,10 @@ import UIKit
 
 class EmailTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    @IBOutlet weak var userEmailLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

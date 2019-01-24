@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 enum UserDefaultKeys: String {
     case token = "UserToken"
@@ -107,7 +108,7 @@ struct Requests {
         
         let jsonData = try? JSONEncoder().encode(json)
         
-        let url = URL(string: "https://f734edcf.ngrok.io/api/" + api)
+        let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api/" + api)
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = "POST"
         let header = Header.init(token: token).header
@@ -121,20 +122,20 @@ struct Requests {
                 print(error?.localizedDescription ?? "No Data")
                 return
             }
-            
+            let json = try? JSON(data: data)
+            print("json: \(json)")
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let responseJSON = responseJSON as? [String: Any]{
                 callBack(responseJSON)
             }
         }
         task.resume()
-
     }
     
     
     static func getRequset(api: String, header: [String: String], callBack: @escaping ([String: Any]) -> Void){
         
-        let url = URL(string: "https://f734edcf.ngrok.io/api/" + api)
+        let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api/" + api)
         var urlRequset = URLRequest(url: url!)
         
         for headers in header {
@@ -147,7 +148,19 @@ struct Requests {
                 print("error: \(error?.localizedDescription)")
                 return
             }
+            
+            let json = try? JSON(data: data)
+            if let jsonresult = json!["result"].bool {
+                print("jsonresult: \(jsonresult)")
+            }
+            if let jsonResult = json?.dictionaryObject {
+                print("test json: \(jsonResult)")
+            }
+//            if let jsonResult2 = jsonResult!["result"] {
+//
+//            }
             do {
+                print("real json")
                 let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
                 if let responseJSON = responseJSON as? [String: Any] {
                     callBack(responseJSON)

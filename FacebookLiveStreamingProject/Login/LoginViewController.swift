@@ -66,7 +66,7 @@ class LoginViewController: UIViewController {
     func judgmentUserDefaultToken(tokenKey: String?){
         startAnimation()
         print("judgggg")
-        guard var usertoken = userDefault.value(forKey: tokenKey!) as? String else {
+        guard let usertoken = userDefault.value(forKey: tokenKey!) as? String else {
             stopAnimation()
             showErrorAlert()
             return
@@ -125,14 +125,14 @@ extension LoginViewController {
     
     func setNVActivityIndicatorView(){
         
-        underNvaiView.backgroundColor = UIColor.lightGray
+        underNvaiView.backgroundColor = UIColor.black
         underNvaiView.alpha = 0.5
         underNvaiView.center = view.center
         view.addSubview(underNvaiView)
 //        underNvaiView.isHidden = true
         
         smallView.backgroundColor = UIColor.white
-        smallView.layer.cornerRadius = UIScreen.main.bounds.width / 12
+        smallView.layer.cornerRadius = UIScreen.main.bounds.width / 20
         smallView.clipsToBounds = true
         smallView.center = underNvaiView.center
         view.addSubview(smallView)

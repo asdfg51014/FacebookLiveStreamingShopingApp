@@ -18,6 +18,15 @@
 		2AD098DD21F702C5003E9DD0 /* BuyerInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */; };
 		2AD0990721F876A4003E9DD0 /* BuyerInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0990621F876A4003E9DD0 /* BuyerInformationTableViewCell.swift */; };
 		2AD0990921F8812D003E9DD0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0990821F8812D003E9DD0 /* Protocols.swift */; };
+		2AE5FC2421F9619B0064B771 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2221F9619B0064B771 /* NameTableViewCell.swift */; };
+		2AE5FC2521F9619B0064B771 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2321F9619B0064B771 /* NameTableViewCell.xib */; };
+		2AE5FC2821F9622E0064B771 /* EmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2621F9622E0064B771 /* EmailTableViewCell.swift */; };
+		2AE5FC2921F9622E0064B771 /* EmailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2721F9622E0064B771 /* EmailTableViewCell.xib */; };
+		2AE5FC2C21F9627F0064B771 /* PhoneNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2A21F9627F0064B771 /* PhoneNumberTableViewCell.swift */; };
+		2AE5FC2D21F9627F0064B771 /* PhoneNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2B21F9627F0064B771 /* PhoneNumberTableViewCell.xib */; };
+		2AE5FC3021F963FB0064B771 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2E21F963FB0064B771 /* AddressTableViewCell.swift */; };
+		2AE5FC3121F963FB0064B771 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2F21F963FB0064B771 /* AddressTableViewCell.xib */; };
+		2AE5FC3321F982120064B771 /* BuyerInformationViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE5FC3221F982120064B771 /* BuyerInformationViewControllerExtensions.swift */; };
 		D11823680DBBBF9495C37BC9 /* Pods_FacebookLiveStreamingProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4A93E7622A0F8939F158C2 /* Pods_FacebookLiveStreamingProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +44,15 @@
 		2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInformationViewController.swift; sourceTree = "<group>"; };
 		2AD0990621F876A4003E9DD0 /* BuyerInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInformationTableViewCell.swift; sourceTree = "<group>"; };
 		2AD0990821F8812D003E9DD0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		2AE5FC2221F9619B0064B771 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		2AE5FC2321F9619B0064B771 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
+		2AE5FC2621F9622E0064B771 /* EmailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTableViewCell.swift; sourceTree = "<group>"; };
+		2AE5FC2721F9622E0064B771 /* EmailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailTableViewCell.xib; sourceTree = "<group>"; };
+		2AE5FC2A21F9627F0064B771 /* PhoneNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTableViewCell.swift; sourceTree = "<group>"; };
+		2AE5FC2B21F9627F0064B771 /* PhoneNumberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberTableViewCell.xib; sourceTree = "<group>"; };
+		2AE5FC2E21F963FB0064B771 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
+		2AE5FC2F21F963FB0064B771 /* AddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		2AE5FC3221F982120064B771 /* BuyerInformationViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInformationViewControllerExtensions.swift; sourceTree = "<group>"; };
 		4B143CDA68DC4846CC72FFCC /* Pods-FacebookLiveStreamingProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookLiveStreamingProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookLiveStreamingProject/Pods-FacebookLiveStreamingProject.debug.xcconfig"; sourceTree = "<group>"; };
 		6C4A93E7622A0F8939F158C2 /* Pods_FacebookLiveStreamingProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookLiveStreamingProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF914F39C0621CB9CDF9E38 /* Pods-FacebookLiveStreamingProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookLiveStreamingProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookLiveStreamingProject/Pods-FacebookLiveStreamingProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +126,15 @@
 			children = (
 				2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */,
 				2AD0990621F876A4003E9DD0 /* BuyerInformationTableViewCell.swift */,
+				2AE5FC2221F9619B0064B771 /* NameTableViewCell.swift */,
+				2AE5FC2321F9619B0064B771 /* NameTableViewCell.xib */,
+				2AE5FC2621F9622E0064B771 /* EmailTableViewCell.swift */,
+				2AE5FC2721F9622E0064B771 /* EmailTableViewCell.xib */,
+				2AE5FC2A21F9627F0064B771 /* PhoneNumberTableViewCell.swift */,
+				2AE5FC2B21F9627F0064B771 /* PhoneNumberTableViewCell.xib */,
+				2AE5FC2E21F963FB0064B771 /* AddressTableViewCell.swift */,
+				2AE5FC2F21F963FB0064B771 /* AddressTableViewCell.xib */,
+				2AE5FC3221F982120064B771 /* BuyerInformationViewControllerExtensions.swift */,
 			);
 			path = BuyerInformationViewController;
 			sourceTree = "<group>";
@@ -199,8 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A11988621F5F0AF0021966E /* LaunchScreen.storyboard in Resources */,
+				2AE5FC2921F9622E0064B771 /* EmailTableViewCell.xib in Resources */,
 				2A11988321F5F0AF0021966E /* Assets.xcassets in Resources */,
+				2AE5FC2521F9619B0064B771 /* NameTableViewCell.xib in Resources */,
 				2A11987E21F5F0AE0021966E /* Main.storyboard in Resources */,
+				2AE5FC3121F963FB0064B771 /* AddressTableViewCell.xib in Resources */,
+				2AE5FC2D21F9627F0064B771 /* PhoneNumberTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,12 +307,17 @@
 			files = (
 				2A11989A21F60B170021966E /* LoginViewController.swift in Sources */,
 				2A11989C21F60CE70021966E /* IdentityViewController.swift in Sources */,
+				2AE5FC2821F9622E0064B771 /* EmailTableViewCell.swift in Sources */,
 				2A11989821F5F8A40021966E /* Request.swift in Sources */,
 				2AD098DD21F702C5003E9DD0 /* BuyerInformationViewController.swift in Sources */,
 				2AD0990721F876A4003E9DD0 /* BuyerInformationTableViewCell.swift in Sources */,
+				2AE5FC3321F982120064B771 /* BuyerInformationViewControllerExtensions.swift in Sources */,
+				2AE5FC3021F963FB0064B771 /* AddressTableViewCell.swift in Sources */,
 				2A11987921F5F0AE0021966E /* AppDelegate.swift in Sources */,
+				2AE5FC2421F9619B0064B771 /* NameTableViewCell.swift in Sources */,
 				2A11988121F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld in Sources */,
 				2AD0990921F8812D003E9DD0 /* Protocols.swift in Sources */,
+				2AE5FC2C21F9627F0064B771 /* PhoneNumberTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

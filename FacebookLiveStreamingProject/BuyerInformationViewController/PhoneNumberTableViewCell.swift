@@ -10,6 +10,10 @@ import UIKit
 
 class PhoneNumberTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    
+    @IBOutlet weak var userPhoneNumberTextField: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

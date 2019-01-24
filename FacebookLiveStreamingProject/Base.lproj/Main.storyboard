@@ -137,18 +137,18 @@
                                     <constraint firstItem="GDf-ac-d2R" firstAttribute="centerX" secondItem="Kab-zO-NCI" secondAttribute="centerX" id="cim-UX-h3r"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="flL-6w-TaI">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="flL-6w-TaI">
                                 <rect key="frame" x="16" y="607" width="343" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV5-5f-hdu">
-                                        <rect key="frame" x="0.0" y="0.0" width="146" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="44"/>
                                         <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="確認">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjK-Fw-fjm">
-                                        <rect key="frame" x="197" y="0.0" width="146" height="44"/>
+                                        <rect key="frame" x="179.5" y="0.0" width="163.5" height="44"/>
                                         <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="跳過">
@@ -203,7 +203,6 @@
         <!--Navigation Controller-->
         <scene sceneID="bKe-Io-pGl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lom-SW-jsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cad-CQ-MZs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aw1-eQ-o6a">
@@ -215,6 +214,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sYl-vn-spp"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lom-SW-jsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="37.331334332833585"/>
         </scene>
