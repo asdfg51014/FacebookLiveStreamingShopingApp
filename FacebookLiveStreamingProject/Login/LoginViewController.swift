@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
         startAnimation()
         guard let usertoken = userDefault.value(forKey: tokenKey!) as? String else {
             stopAnimation()
-            showErrorAlert()
+//            showErrorAlert()
             return
         }
         Requests.getRequset(api: CommonAPIs.getUserInformation, header: Header.init(token: usertoken).header) { (callBack) in

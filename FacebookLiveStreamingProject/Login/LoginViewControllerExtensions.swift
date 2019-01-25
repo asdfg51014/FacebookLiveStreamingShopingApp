@@ -40,6 +40,7 @@ extension LoginViewController {
         //        underNvaiView.isHidden = true
         
         smallView.backgroundColor = UIColor.white
+        smallView.alpha = 0.5
         smallView.layer.cornerRadius = UIScreen.main.bounds.width / 20
         smallView.clipsToBounds = true
         smallView.center = underNvaiView.center

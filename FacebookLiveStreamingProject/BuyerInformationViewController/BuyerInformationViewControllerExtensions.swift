@@ -12,6 +12,15 @@ import SwiftyJSON
 
 extension BuyerInformationViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 3:
+            return 100
+        default:
+            return 50
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }

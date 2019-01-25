@@ -97,6 +97,18 @@ struct Header {
     }
 }
 
+struct Body {
+    
+    var body: [String: String]
+    
+    init(expirationDate: String) {
+        body = [
+            "expirationDate": "\(expirationDate)"
+        ]
+    }
+    
+}
+
 //struct Body {
 //    <#fields#>
 //}
