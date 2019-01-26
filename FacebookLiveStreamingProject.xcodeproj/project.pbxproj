@@ -24,12 +24,7 @@
 		2A4D40DB21FB5F0000F2AC2F /* WarehouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4D40D921FB5F0000F2AC2F /* WarehouseTableViewCell.xib */; };
 		2A4D40DD21FB623C00F2AC2F /* CreateCommodityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D40DC21FB623C00F2AC2F /* CreateCommodityViewController.swift */; };
 		2AD098DD21F702C5003E9DD0 /* BuyerInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */; };
-		2AD0990721F876A4003E9DD0 /* BuyerInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0990621F876A4003E9DD0 /* BuyerInformationTableViewCell.swift */; };
 		2AD0990921F8812D003E9DD0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0990821F8812D003E9DD0 /* Protocols.swift */; };
-		2AE5FC2421F9619B0064B771 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2221F9619B0064B771 /* NameTableViewCell.swift */; };
-		2AE5FC2521F9619B0064B771 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2321F9619B0064B771 /* NameTableViewCell.xib */; };
-		2AE5FC2821F9622E0064B771 /* EmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2621F9622E0064B771 /* EmailTableViewCell.swift */; };
-		2AE5FC2921F9622E0064B771 /* EmailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2721F9622E0064B771 /* EmailTableViewCell.xib */; };
 		2AE5FC2C21F9627F0064B771 /* PhoneNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2A21F9627F0064B771 /* PhoneNumberTableViewCell.swift */; };
 		2AE5FC2D21F9627F0064B771 /* PhoneNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2B21F9627F0064B771 /* PhoneNumberTableViewCell.xib */; };
 		2AE5FC3021F963FB0064B771 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2E21F963FB0064B771 /* AddressTableViewCell.swift */; };
@@ -58,12 +53,7 @@
 		2A4D40D921FB5F0000F2AC2F /* WarehouseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarehouseTableViewCell.xib; sourceTree = "<group>"; };
 		2A4D40DC21FB623C00F2AC2F /* CreateCommodityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommodityViewController.swift; sourceTree = "<group>"; };
 		2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInformationViewController.swift; sourceTree = "<group>"; };
-		2AD0990621F876A4003E9DD0 /* BuyerInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInformationTableViewCell.swift; sourceTree = "<group>"; };
 		2AD0990821F8812D003E9DD0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		2AE5FC2221F9619B0064B771 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
-		2AE5FC2321F9619B0064B771 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
-		2AE5FC2621F9622E0064B771 /* EmailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTableViewCell.swift; sourceTree = "<group>"; };
-		2AE5FC2721F9622E0064B771 /* EmailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailTableViewCell.xib; sourceTree = "<group>"; };
 		2AE5FC2A21F9627F0064B771 /* PhoneNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTableViewCell.swift; sourceTree = "<group>"; };
 		2AE5FC2B21F9627F0064B771 /* PhoneNumberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberTableViewCell.xib; sourceTree = "<group>"; };
 		2AE5FC2E21F963FB0064B771 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
@@ -174,11 +164,6 @@
 			children = (
 				2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */,
 				2AE5FC3221F982120064B771 /* BuyerInformationViewControllerExtensions.swift */,
-				2AD0990621F876A4003E9DD0 /* BuyerInformationTableViewCell.swift */,
-				2AE5FC2221F9619B0064B771 /* NameTableViewCell.swift */,
-				2AE5FC2321F9619B0064B771 /* NameTableViewCell.xib */,
-				2AE5FC2621F9622E0064B771 /* EmailTableViewCell.swift */,
-				2AE5FC2721F9622E0064B771 /* EmailTableViewCell.xib */,
 				2AE5FC2A21F9627F0064B771 /* PhoneNumberTableViewCell.swift */,
 				2AE5FC2B21F9627F0064B771 /* PhoneNumberTableViewCell.xib */,
 				2AE5FC2E21F963FB0064B771 /* AddressTableViewCell.swift */,
@@ -275,10 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A11988621F5F0AF0021966E /* LaunchScreen.storyboard in Resources */,
-				2AE5FC2921F9622E0064B771 /* EmailTableViewCell.xib in Resources */,
 				2A4D40DB21FB5F0000F2AC2F /* WarehouseTableViewCell.xib in Resources */,
 				2A11988321F5F0AF0021966E /* Assets.xcassets in Resources */,
-				2AE5FC2521F9619B0064B771 /* NameTableViewCell.xib in Resources */,
 				2A11987E21F5F0AE0021966E /* Main.storyboard in Resources */,
 				2AE5FC3121F963FB0064B771 /* AddressTableViewCell.xib in Resources */,
 				2AE5FC2D21F9627F0064B771 /* PhoneNumberTableViewCell.xib in Resources */,
@@ -360,17 +343,14 @@
 				2A4D40DA21FB5F0000F2AC2F /* WarehouseTableViewCell.swift in Sources */,
 				2A11989A21F60B170021966E /* LoginViewController.swift in Sources */,
 				2A11989C21F60CE70021966E /* IdentityViewController.swift in Sources */,
-				2AE5FC2821F9622E0064B771 /* EmailTableViewCell.swift in Sources */,
 				2A11989821F5F8A40021966E /* Request.swift in Sources */,
 				2A4D40C321FB4F3400F2AC2F /* SellerMenuViewController.swift in Sources */,
 				2AD098DD21F702C5003E9DD0 /* BuyerInformationViewController.swift in Sources */,
-				2AD0990721F876A4003E9DD0 /* BuyerInformationTableViewCell.swift in Sources */,
 				2AE5FC3321F982120064B771 /* BuyerInformationViewControllerExtensions.swift in Sources */,
 				2AE5FC3021F963FB0064B771 /* AddressTableViewCell.swift in Sources */,
 				2A4D409C21F9BB6B00F2AC2F /* LoginViewControllerExtensions.swift in Sources */,
 				2A11987921F5F0AE0021966E /* AppDelegate.swift in Sources */,
 				2A4D40DD21FB623C00F2AC2F /* CreateCommodityViewController.swift in Sources */,
-				2AE5FC2421F9619B0064B771 /* NameTableViewCell.swift in Sources */,
 				2A11988121F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld in Sources */,
 				2AD0990921F8812D003E9DD0 /* Protocols.swift in Sources */,
 				2A4D40BF21FAD99600F2AC2F /* LoadingActivityView.swift in Sources */,

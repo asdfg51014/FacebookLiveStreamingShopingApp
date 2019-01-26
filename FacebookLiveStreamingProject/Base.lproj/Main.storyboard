@@ -415,17 +415,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kab-zO-NCI">
                                 <rect key="frame" x="0.0" y="60" width="375" height="133.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GDf-ac-d2R">
-                                        <rect key="frame" x="141" y="20" width="93" height="93.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="GDf-ac-d2R" secondAttribute="height" multiplier="1:1" id="TjD-yC-cLT"/>
-                                        </constraints>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="l97-0o-hgX">
+                                        <rect key="frame" x="24" y="20" width="327" height="93.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GDf-ac-d2R">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="93.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GDf-ac-d2R" secondAttribute="height" multiplier="1:1" id="TjD-yC-cLT"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ngU-5B-Akb">
+                                                <rect key="frame" x="109.5" y="0.0" width="217.5" height="93.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht1-gM-7Q9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="217.5" height="38.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRO-rS-5AP">
+                                                        <rect key="frame" x="0.0" y="54.5" width="217.5" height="39"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="GDf-ac-d2R" secondAttribute="bottom" constant="20" id="N4m-Mh-N44"/>
-                                    <constraint firstItem="GDf-ac-d2R" firstAttribute="centerX" secondItem="Kab-zO-NCI" secondAttribute="centerX" id="cim-UX-h3r"/>
-                                    <constraint firstItem="GDf-ac-d2R" firstAttribute="centerY" secondItem="Kab-zO-NCI" secondAttribute="centerY" id="tBe-3B-SOz"/>
+                                    <constraint firstItem="l97-0o-hgX" firstAttribute="leading" secondItem="Kab-zO-NCI" secondAttribute="leading" constant="24" id="0aG-dU-l0b"/>
+                                    <constraint firstItem="l97-0o-hgX" firstAttribute="top" secondItem="Kab-zO-NCI" secondAttribute="top" constant="20" id="BV8-ov-kRW"/>
+                                    <constraint firstAttribute="trailing" secondItem="l97-0o-hgX" secondAttribute="trailing" constant="24" id="XAD-h7-CT1"/>
+                                    <constraint firstAttribute="bottom" secondItem="l97-0o-hgX" secondAttribute="bottom" constant="20" id="jRa-kt-EF4"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="flL-6w-TaI">
@@ -486,6 +509,8 @@
                         <viewLayoutGuide key="safeArea" id="HVr-5v-FEp"/>
                     </view>
                     <connections>
+                        <outlet property="emailLabel" destination="aRO-rS-5AP" id="eVF-U0-76n"/>
+                        <outlet property="nameLabel" destination="ht1-gM-7Q9" id="Lue-au-f2Y"/>
                         <outlet property="tableView" destination="51u-sl-SMg" id="5uq-Hp-neD"/>
                         <outlet property="userImageView" destination="GDf-ac-d2R" id="0cc-K0-6Qi"/>
                     </connections>

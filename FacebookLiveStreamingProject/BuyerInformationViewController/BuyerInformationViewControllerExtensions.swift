@@ -12,9 +12,10 @@ import SwiftyJSON
 
 extension BuyerInformationViewController: UITableViewDelegate, UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
-        case 3:
+        case 1:
             return 100
         default:
             return 50
@@ -30,11 +31,7 @@ extension BuyerInformationViewController: UITableViewDelegate, UITableViewDataSo
         case 0:
             return 1
         case 1:
-            return 1
-        case 2:
-            return 1
-        case 3:
-            return 1
+            return 5
         default:
             break
         }
@@ -45,25 +42,13 @@ extension BuyerInformationViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
-        
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: nameReuseId, for: indexPath) as! NameTableViewCell
-            cell.nameLabel.text = "Name"
-            cell.userNameLabel.text = ""
-            return cell
-        case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: emailReuseId, for: indexPath) as! EmailTableViewCell
-            cell.emailLabel.text = "Email"
-            cell.userEmailLabel.text = ""
-            return cell
-        case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: phoneNumberReuserId, for: indexPath) as! PhoneNumberTableViewCell
             cell.phoneNumberLabel.text = "Phone Number"
             cell.userPhoneNumberTextField.text = ""
             return cell
+            
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: addressReuseId, for: indexPath) as! AddressTableViewCell
             return cell
@@ -73,26 +58,32 @@ extension BuyerInformationViewController: UITableViewDelegate, UITableViewDataSo
 
 extension BuyerInformationViewController {
     
+    func setUserImageView(){
+        userImageView.layer.cornerRadius = userImageView.frame.height / 2
+        userImageView.clipsToBounds = true
+        userImageView.contentMode = .scaleAspectFill
+        userImageView.layer.borderColor = UIColor.lightGray.cgColor
+        userImageView.layer.borderWidth = 3
+    }
+    
     func getUserInformation(){
         
         guard var userToken = userDefault.value(forKey: UserDefaultKeys.token.rawValue) as? String else {
             return
         }
-        
         Requests.getRequset(api: CommonAPIs.getUserInformation, header: Header.init(token: userToken).header) { (data) in
             let json = try? JSON(data: data)
             
-            if json!["result"].bool == true {
-                let result = json!["response"].dictionary
-                let url = URL(string: "\(json!["response"]["avatar"])")
-                let imageData = try? Data(contentsOf: url!)
-                DispatchQueue.main.async {
-                    self.userImageView.image = UIImage(data: imageData!)
-                }
+            guard json!["result"].bool == true else {
+                return
             }
-            
+            let url = URL(string: "\(json!["response"]["avatar"])")
+            let imageData = try? Data(contentsOf: url!)
+            DispatchQueue.main.async {
+                self.userImageView.image = UIImage(data: imageData!)
+                self.nameLabel.text = "name" + "\n\(json!["response"]["name"].string!)"
+                self.emailLabel.text = "email" + "\n\(json!["response"]["email"].string!)"
+            }
         }
     }
-    
-    
 }

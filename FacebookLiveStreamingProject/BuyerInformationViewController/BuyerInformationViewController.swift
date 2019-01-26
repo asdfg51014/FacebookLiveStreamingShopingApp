@@ -10,8 +10,6 @@ import UIKit
 
 class BuyerInformationViewController: UIViewController {
     
-    let nameReuseId = "NameCell"
-    let emailReuseId = "EmailCell"
     let phoneNumberReuserId = "PhoneNumberCell"
     let addressReuseId = "AddressCell"
     
@@ -20,6 +18,10 @@ class BuyerInformationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var userImageView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var emailLabel: UILabel!
     
     let userDefault = UserDefaults.standard
     
@@ -41,16 +43,13 @@ class BuyerInformationViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
         tableView.delegate = self
         tableView.dataSource = self
-        let nameNib = UINib(nibName: "NameTableViewCell", bundle: nil)
-        tableView.register(nameNib, forCellReuseIdentifier: nameReuseId)
-        let emailNib = UINib(nibName: "EmailTableViewCell", bundle: nil)
-        tableView.register(emailNib, forCellReuseIdentifier: emailReuseId)
         let phoneNumberNib = UINib(nibName: "PhoneNumberTableViewCell", bundle: nil)
         tableView.register(phoneNumberNib, forCellReuseIdentifier: phoneNumberReuserId)
         let addressNib = UINib(nibName: "AddressTableViewCell", bundle: nil)
         tableView.register(addressNib, forCellReuseIdentifier: addressReuseId)
-        
         getUserInformation()
+        
+//        getUserInformation()
     }
     
     override func viewWillLayoutSubviews() {
@@ -58,22 +57,10 @@ class BuyerInformationViewController: UIViewController {
         setUserImageView()
     }
     
-}
-
-
-
-extension BuyerInformationViewController {
-    
-    func setUserImageView(){
-        userImageView.layer.cornerRadius = userImageView.frame.height / 2
-        userImageView.clipsToBounds = true
-        userImageView.contentMode = .scaleAspectFill
-        userImageView.layer.borderColor = UIColor.lightGray.cgColor
-        userImageView.layer.borderWidth = 3
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        getUserInformation()
     }
     
-//    func getUserInformation(){
-//        Requests.getRequset(api: <#T##String#>, header: <#T##[String : String]#>, callBack: <#T##([String : Any]) -> Void#>)
-//    }
-    
 }
+

@@ -19,8 +19,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LVy-gV-jjo">
-                        <rect key="frame" x="16" y="5" width="288" height="49.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LVy-gV-jjo">
+                        <rect key="frame" x="16" y="5" width="296" height="49.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4z-gq-oBw">
                                 <rect key="frame" x="0.0" y="0.0" width="102.5" height="49.5"/>
@@ -28,18 +28,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-Gw-nhD">
-                                <rect key="frame" x="118.5" y="0.0" width="169.5" height="49.5"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4CG-3n-HnZ">
+                                <rect key="frame" x="110.5" y="0.0" width="185.5" height="49.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="國碼" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNM-M0-9uA">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="49.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手機號碼" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-Gw-nhD">
+                                        <rect key="frame" x="54" y="0.0" width="131.5" height="49.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VNM-M0-9uA" firstAttribute="height" secondItem="ecH-Gw-nhD" secondAttribute="height" id="ELm-xZ-hn3"/>
+                                    <constraint firstItem="VNM-M0-9uA" firstAttribute="width" secondItem="ecH-Gw-nhD" secondAttribute="width" multiplier="0.35" id="hh3-if-Pun"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                     </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="LVy-gV-jjo" secondAttribute="bottom" constant="5" id="ODx-Kz-Rou"/>
-                    <constraint firstAttribute="trailing" secondItem="LVy-gV-jjo" secondAttribute="trailing" constant="16" id="tqv-zw-vaY"/>
+                    <constraint firstAttribute="trailing" secondItem="LVy-gV-jjo" secondAttribute="trailing" constant="8" id="tqv-zw-vaY"/>
                     <constraint firstItem="LVy-gV-jjo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="vBV-YJ-ZJL"/>
                     <constraint firstItem="LVy-gV-jjo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="wXi-Tf-ZdL"/>
                 </constraints>

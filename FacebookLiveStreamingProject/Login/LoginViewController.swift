@@ -13,19 +13,11 @@ import SwiftyJSON
 
 class LoginViewController: UIViewController {
     
-    var sendUserInformationDelegate: BuyerInformationDelegate?
+    let activityProperty = ActivityView()
     
     var userDefault = UserDefaults.standard
     
-    let fullScreen = UIScreen.main.bounds
-    
     let ivc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IVC")
-    
-    let nvaiView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 3), type: NVActivityIndicatorType.ballClipRotate, color: UIColor.black, padding: 50)
-    
-    let underNvaiView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-    
-    let smallView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width / 4, height: UIScreen.main.bounds.width / 4))
     
     @IBAction func loginButton(_ sender: UIButton){
         let manager = LoginManager()
@@ -39,11 +31,14 @@ class LoginViewController: UIViewController {
                 
                 self.userDefault.setValue(token.authenticationToken, forKey: UserDefaultKeys.token.rawValue)
                 Requests.post(api: "token", token: token.authenticationToken, expirationDate: token.expirationDate, callBack: { (callResult) in
-                    let json = try? JSON(data: callResult)
-                    if json!["result"].bool == true {
-                        DispatchQueue.main.async {
-                            self.judgmentUserDefaultToken(tokenKey: UserDefaultKeys.token.rawValue)
+                    do {
+                        let json = try? JSON(data: callResult)
+                        guard json!["result"].bool! else {
+                            return
                         }
+                        self.judgmentUserDefaultToken(tokenKey: UserDefaultKeys.token.rawValue)
+                    } catch {
+                        print(error.localizedDescription)
                     }
                 })
             }
@@ -51,20 +46,23 @@ class LoginViewController: UIViewController {
     }
     
     func judgmentUserDefaultToken(tokenKey: String?){
-        startAnimation()
+        startActivityAnmation()
         guard let usertoken = userDefault.value(forKey: tokenKey!) as? String else {
-            stopAnimation()
-//            showErrorAlert()
+            stopAnimating()
             return
         }
         Requests.getRequset(api: CommonAPIs.getUserInformation, header: Header.init(token: usertoken).header) { (callBack) in
             DispatchQueue.main.async {
-                let json = try? JSON(data: callBack)
-                if let jsonResult = json!["result"].bool {
-                    if jsonResult == true {
-                        self.navigationController?.pushViewController(self.ivc, animated: true)
+                do {
+                    let json = try JSON(data: callBack)
+                    if let jsonResult = json["result"].bool {
+                        if jsonResult == true {
+                            self.navigationController?.pushViewController(self.ivc, animated: true)
+                        }
+                        self.stopAnimating()
                     }
-                    self.stopAnimation()
+                } catch {
+                    print(error.localizedDescription)
                 }
             }
         }
@@ -74,10 +72,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         judgmentUserDefaultToken(tokenKey: UserDefaultKeys.token.rawValue)
-    }
-    
-    override func viewWillLayoutSubviews() {
-        setNVActivityIndicatorView()
     }
 }
 
