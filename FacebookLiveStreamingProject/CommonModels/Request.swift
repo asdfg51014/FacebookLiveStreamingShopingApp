@@ -9,8 +9,10 @@
 import Foundation
 import SwiftyJSON
 
-enum UserDefaultKeys: String {
-    case token = "UserToken"
+
+
+struct Url {
+    static let url = "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api"
 }
 
 //struct UsersUserDefault {
@@ -32,13 +34,50 @@ enum UserDefaultKeys: String {
 //    }
 //}
 
+struct GetApis {
+    static let getRecipientsInformationUnderAUser = "/api/recipients"
+    
+    static let getCountryCodeAndPhoneCode = "/api/country-code"
+    
+//    let getAllPlacedOrdersList: String
+    
+    static let getLastestOrdersList = "/api/lastest-channel-orders"
+    
+    static let getUploadedItemsInformation = "/api/items"
+    
+    static let getLiveStreamHistory = "/api/channels"
+    
+    static let getPlaedOrdersInDetail = "/api/sekker-orders"
+    
+//    let getDesignatedOrderInDetail: String
+    
+    let getAllSoldItemsInDetail = "/api/sold-items"
+    
+//    let getItemsSoldOnTheDesignatedLiveStreamingInDetail: String
+    
+    
+//    init(userID: Int) {
+//        getAllPlacedOrdersList = "/api/orders/\(userID)"
+//    }
+    
+//    init(getDesignatedOrderInDetailChannelId: Int) {
+//        getDesignatedOrderInDetail = "/api/seller-order/\(channelId)"
+//    }
+    
+//    init(getItemsSoldOnTheDesignatedLiveStreamingInDetailChannelId: String) {
+//        getItemsSoldOnTheDesignatedLiveStreamingInDetail = ""
+//    }
+    
+    
+}
+
 struct CommonAPIs {
-    static let updateOrInsertNewToken = "token"
-    static let getUserInformation = "users"
+    static let updateOrInsertNewToken = "/token"
+    static let getUserInformation = "/users"
     let getStreamingItemInformation: String
     
     init(channelId: String) {
-        getStreamingItemInformation = "streaming-item/\(channelId)"
+        getStreamingItemInformation = "/streaming-item/\(channelId)"
     }
 }
 
@@ -52,7 +91,7 @@ struct StartALiveStreaming {
     let startALiveStreaming = "/channel"
 //    let 推播商品
 //    let 取得上架資訊
-    let serminateLiveVideoSteaming = "user-channel-id"
+    let serminateLiveVideoSteaming = "/user-channel-id"
     let getLiveStreamHistory = "/channels"
     
 }
@@ -99,9 +138,9 @@ struct Header {
 
 struct Body {
     
-    var body: [String: String]
+    let body: [String: String]
     
-    init(expirationDate: String) {
+    init(expirationDate: Date) {
         body = [
             "expirationDate": "\(expirationDate)"
         ]
@@ -109,29 +148,28 @@ struct Body {
     
 }
 
-//struct Body {
-//    <#fields#>
-//}
 
 struct Requests {
     
-    static func post(api: String, token: String, expirationDate: Date, callBack: @escaping (Data) -> Void) {
+    static func post(_ url: String, _ api: String, _ header: [String: String], _ body: [String: String], _ callBack: @escaping (Data) -> Void) {
         
-        let json: [String: String] = ["expirationDate": "\(expirationDate)"]
+        let jsonData = try? JSONEncoder().encode(body)
         
-        let jsonData = try? JSONEncoder().encode(json)
-        
-        let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api/" + api)
-        var urlRequest = URLRequest(url: url!)
+        let urlApi = URL(string: url + api)!
+        var urlRequest = URLRequest(url: urlApi)
         urlRequest.httpMethod = "POST"
-        let header = Header.init(token: token).header
         for headers in header {
             urlRequest.addValue(headers.value, forHTTPHeaderField: headers.key)
         }
         urlRequest.httpBody = jsonData
         
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-            guard let data = data, error == nil else {
+            guard let data = data else {
+                print(error?.localizedDescription)
+                return
+            }
+            guard error == nil else {
+                callBack(data)
                 print(error?.localizedDescription ?? "No Data")
                 return
             }
@@ -141,10 +179,10 @@ struct Requests {
     }
     
     
-    static func getRequset(api: String, header: [String: String], callBack: @escaping (Data) -> Void){
+    static func getRequset(_ url: String, _ api: String, _ header: [String: String], _ callBack: @escaping (Data) -> Void){
         
-        let url = URL(string: "https://facebookoptimizedlivestreamsellingsystem.rayawesomespace.space/api/" + api)
-        var urlRequset = URLRequest(url: url!)
+        let urlApi = URL(string: url + api)!
+        var urlRequset = URLRequest(url: urlApi)
         
         for headers in header {
             urlRequset.addValue(headers.value, forHTTPHeaderField: headers.key)

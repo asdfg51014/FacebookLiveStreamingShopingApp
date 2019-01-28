@@ -29,12 +29,6 @@ class WarehouseViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib.init(nibName: "CreateCommodityTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        let shadowLayer = CALayer()
-        
-        
-//        shadow(in: createCommodityButtonOutlet.layer)
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {

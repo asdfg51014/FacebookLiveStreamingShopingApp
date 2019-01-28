@@ -8,11 +8,31 @@
 
 import UIKit
 
-class PhoneNumberTableViewCell: UITableViewCell {
+class PhoneNumberTableViewCell: UITableViewCell, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    var phoneCode: [Int] = []
 
     @IBOutlet weak var phoneNumberLabel: UILabel!
     
     @IBOutlet weak var userPhoneNumberTextField: UITextField!
+    
+    @IBOutlet weak var userPhoneCodeTextField: UITextField!
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return phoneCode.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "\(phoneCode[row])"
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        userPhoneCodeTextField.text = "\(phoneCode[row])"
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

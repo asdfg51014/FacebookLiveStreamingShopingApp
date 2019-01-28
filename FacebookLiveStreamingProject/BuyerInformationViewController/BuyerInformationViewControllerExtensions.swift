@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SwiftyJSON
+import NVActivityIndicatorView
 
 extension BuyerInformationViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -46,7 +47,7 @@ extension BuyerInformationViewController: UITableViewDelegate, UITableViewDataSo
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: phoneNumberReuserId, for: indexPath) as! PhoneNumberTableViewCell
             cell.phoneNumberLabel.text = "Phone Number"
-            cell.userPhoneNumberTextField.text = ""
+            cell.phoneCode = self.phoneCode
             return cell
             
         default:
@@ -56,7 +57,7 @@ extension BuyerInformationViewController: UITableViewDelegate, UITableViewDataSo
     }
 }
 
-extension BuyerInformationViewController {
+extension BuyerInformationViewController: NVActivityIndicatorViewable {
     
     func setUserImageView(){
         userImageView.layer.cornerRadius = userImageView.frame.height / 2
@@ -71,8 +72,9 @@ extension BuyerInformationViewController {
         guard var userToken = userDefault.value(forKey: UserDefaultKeys.token.rawValue) as? String else {
             return
         }
-        Requests.getRequset(api: CommonAPIs.getUserInformation, header: Header.init(token: userToken).header) { (data) in
-            let json = try? JSON(data: data)
+        //get user information
+        Requests.getRequset(url, CommonAPIs.getUserInformation, Header.init(token: userToken).header){(callBack) in
+            let json = try? JSON(data: callBack)
             
             guard json!["result"].bool == true else {
                 return
@@ -83,7 +85,51 @@ extension BuyerInformationViewController {
                 self.userImageView.image = UIImage(data: imageData!)
                 self.nameLabel.text = "name" + "\n\(json!["response"]["name"].string!)"
                 self.emailLabel.text = "email" + "\n\(json!["response"]["email"].string!)"
+                
             }
         }
+        //get user addresses
+        Requests.getRequset(url, "/recipients", Header.init(token: userToken).header){(callBack) in
+            do {
+                let json = try JSON(data: callBack)
+                print("testJson: \(json)")
+                guard json["result"].bool == true else {
+                    print("jsonResponse: \(json["response"].string!)")
+                    return
+                }
+                DispatchQueue.main.async {
+                    
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        //get country code and phone code
+        Requests.getRequset(url, "/country-code", Header.init(token: userToken).header){(callBack) in
+            do {
+                let json = try JSON(data: callBack)
+                print("country code json: \(json)")
+                guard json["result"].bool == true else {
+                    return
+                }
+                for i in json["response"].array! {
+                    self.phoneCode.append(i["phone_code"].int!)
+                    
+                    self.countryCode.append(i["country_code"].string!)
+                }
+                DispatchQueue.main.async {
+                    
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
+    }
+    
+    func startActivityAnmation(){
+        startAnimating(activityProperty.size, message: activityProperty.message, messageFont: activityProperty.font, type: NVActivityIndicatorType.ballClipRotate, color: activityProperty.activityColor, padding: activityProperty.padding, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: activityProperty.backgroundColor, textColor: activityProperty.textColor, fadeInAnimation: nil)
     }
 }
+
+

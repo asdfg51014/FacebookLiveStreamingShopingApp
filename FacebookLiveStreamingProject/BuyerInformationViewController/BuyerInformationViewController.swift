@@ -12,18 +12,19 @@ class BuyerInformationViewController: UIViewController {
     
     let phoneNumberReuserId = "PhoneNumberCell"
     let addressReuseId = "AddressCell"
-    
+    let userDefault = UserDefaults.standard
+    let activityProperty = ActivityView()
     var userInformation: [String] = []
+    let url = Url.url
+    
+    var countryCode: [String] = []
+    var phoneCode: [Int] = []
+    
     
     @IBOutlet weak var tableView: UITableView!
-
     @IBOutlet weak var userImageView: UIImageView!
-    
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var emailLabel: UILabel!
-    
-    let userDefault = UserDefaults.standard
     
     @IBAction func confirmButton(_ sender: UIButton){
         
@@ -37,7 +38,6 @@ class BuyerInformationViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = false
@@ -48,8 +48,7 @@ class BuyerInformationViewController: UIViewController {
         let addressNib = UINib(nibName: "AddressTableViewCell", bundle: nil)
         tableView.register(addressNib, forCellReuseIdentifier: addressReuseId)
         getUserInformation()
-        
-//        getUserInformation()
+        startActivityAnmation()
     }
     
     override func viewWillLayoutSubviews() {
@@ -59,7 +58,6 @@ class BuyerInformationViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        getUserInformation()
     }
     
 }

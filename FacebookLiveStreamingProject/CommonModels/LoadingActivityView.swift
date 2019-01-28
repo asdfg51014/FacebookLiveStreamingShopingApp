@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import NVActivityIndicatorView
 
-struct ActivityView {
+class ActivityView: UIViewController, NVActivityIndicatorViewable {
     
     let size = CGSize(width: 50, height: 50)
     
@@ -18,12 +18,16 @@ struct ActivityView {
     
     let font = UIFont(name: "HelveticaNeue", size: 15)
     
-    let activityColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1)
+    let activityColor = UIColor.white
     
     let padding: CGFloat = 50
     
     let backgroundColor = UIColor(red: 105/255, green: 105/255, blue: 105/255, alpha: 0.5)
     
-    let textColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1)
+    let textColor = UIColor.white
     
+    let a = startAnimating(, message: <#T##String?#>, messageFont: <#T##UIFont?#>, type: <#T##NVActivityIndicatorType?#>, color: <#T##UIColor?#>, padding: <#T##CGFloat?#>, displayTimeThreshold: <#T##Int?#>, minimumDisplayTime: <#T##Int?#>, backgroundColor: <#T##UIColor?#>, textColor: <#T##UIColor?#>, fadeInAnimation: <#T##FadeInAnimation?##FadeInAnimation?##(UIView) -> Void#>)
+        
 }
+
+

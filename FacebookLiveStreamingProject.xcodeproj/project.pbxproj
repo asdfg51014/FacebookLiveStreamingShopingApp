@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0E587421FD822800C633B2 /* ContryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E587321FD822800C633B2 /* ContryCode.swift */; };
+		2A0E587E21FE912200C633B2 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E587D21FE912200C633B2 /* LoginModel.swift */; };
+		2A0E588021FE943A00C633B2 /* IsTokenCreated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E587F21FE943A00C633B2 /* IsTokenCreated.swift */; };
+		2A0E588221FE94CA00C633B2 /* UserDefaultFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E588121FE94CA00C633B2 /* UserDefaultFile.swift */; };
+		2A0E588421FE964300C633B2 /* NVActivityAnamationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E588321FE964300C633B2 /* NVActivityAnamationModel.swift */; };
+		2A0E588621FE9A6600C633B2 /* StoryBoardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E588521FE9A6600C633B2 /* StoryBoardID.swift */; };
+		2A0E588821FECE4B00C633B2 /* AlertFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E588721FECE4B00C633B2 /* AlertFile.swift */; };
 		2A11987921F5F0AE0021966E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11987821F5F0AE0021966E /* AppDelegate.swift */; };
 		2A11987E21F5F0AE0021966E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A11987C21F5F0AE0021966E /* Main.storyboard */; };
 		2A11988121F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A11987F21F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld */; };
@@ -23,6 +30,7 @@
 		2A4D40DA21FB5F0000F2AC2F /* WarehouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D40D821FB5F0000F2AC2F /* WarehouseTableViewCell.swift */; };
 		2A4D40DB21FB5F0000F2AC2F /* WarehouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4D40D921FB5F0000F2AC2F /* WarehouseTableViewCell.xib */; };
 		2A4D40DD21FB623C00F2AC2F /* CreateCommodityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D40DC21FB623C00F2AC2F /* CreateCommodityViewController.swift */; };
+		2A4D410121FC986F00F2AC2F /* Analyzes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D410021FC986F00F2AC2F /* Analyzes.swift */; };
 		2AD098DD21F702C5003E9DD0 /* BuyerInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */; };
 		2AD0990921F8812D003E9DD0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0990821F8812D003E9DD0 /* Protocols.swift */; };
 		2AE5FC2C21F9627F0064B771 /* PhoneNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE5FC2A21F9627F0064B771 /* PhoneNumberTableViewCell.swift */; };
@@ -34,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0E587321FD822800C633B2 /* ContryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContryCode.swift; sourceTree = "<group>"; };
+		2A0E587D21FE912200C633B2 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		2A0E587F21FE943A00C633B2 /* IsTokenCreated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsTokenCreated.swift; sourceTree = "<group>"; };
+		2A0E588121FE94CA00C633B2 /* UserDefaultFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultFile.swift; sourceTree = "<group>"; };
+		2A0E588321FE964300C633B2 /* NVActivityAnamationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVActivityAnamationModel.swift; sourceTree = "<group>"; };
+		2A0E588521FE9A6600C633B2 /* StoryBoardID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardID.swift; sourceTree = "<group>"; };
+		2A0E588721FECE4B00C633B2 /* AlertFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFile.swift; sourceTree = "<group>"; };
 		2A11987521F5F0AE0021966E /* FacebookLiveStreamingProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookLiveStreamingProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A11987821F5F0AE0021966E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A11987D21F5F0AE0021966E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +67,7 @@
 		2A4D40D821FB5F0000F2AC2F /* WarehouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarehouseTableViewCell.swift; sourceTree = "<group>"; };
 		2A4D40D921FB5F0000F2AC2F /* WarehouseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarehouseTableViewCell.xib; sourceTree = "<group>"; };
 		2A4D40DC21FB623C00F2AC2F /* CreateCommodityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommodityViewController.swift; sourceTree = "<group>"; };
+		2A4D410021FC986F00F2AC2F /* Analyzes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analyzes.swift; sourceTree = "<group>"; };
 		2AD098DC21F702C5003E9DD0 /* BuyerInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInformationViewController.swift; sourceTree = "<group>"; };
 		2AD0990821F8812D003E9DD0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		2AE5FC2A21F9627F0064B771 /* PhoneNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,10 +119,10 @@
 				2A11988421F5F0AF0021966E /* LaunchScreen.storyboard */,
 				2A11988721F5F0AF0021966E /* Info.plist */,
 				2A11987F21F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld */,
+				2AD0990221F861A0003E9DD0 /* CommonModels */,
 				2A11989121F5F3290021966E /* Login */,
 				2A11989621F5F36D0021966E /* Identity */,
 				2AD098DE21F70A10003E9DD0 /* BuyerInformationViewController */,
-				2AD0990221F861A0003E9DD0 /* CommonModels */,
 				2A4D40C421FB4F7800F2AC2F /* SellerMenuViewController */,
 				2A4D40D521FB5DA400F2AC2F /* WarehouseViewController */,
 				2A4D40DE21FB62E900F2AC2F /* CreateCommodityViewController */,
@@ -119,6 +135,8 @@
 			children = (
 				2A11989921F60B170021966E /* LoginViewController.swift */,
 				2A4D409B21F9BB6B00F2AC2F /* LoginViewControllerExtensions.swift */,
+				2A0E587D21FE912200C633B2 /* LoginModel.swift */,
+				2A0E587F21FE943A00C633B2 /* IsTokenCreated.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -178,6 +196,12 @@
 				2A11989721F5F8A40021966E /* Request.swift */,
 				2AD0990821F8812D003E9DD0 /* Protocols.swift */,
 				2A4D40BE21FAD99600F2AC2F /* LoadingActivityView.swift */,
+				2A4D410021FC986F00F2AC2F /* Analyzes.swift */,
+				2A0E587321FD822800C633B2 /* ContryCode.swift */,
+				2A0E588121FE94CA00C633B2 /* UserDefaultFile.swift */,
+				2A0E588321FE964300C633B2 /* NVActivityAnamationModel.swift */,
+				2A0E588521FE9A6600C633B2 /* StoryBoardID.swift */,
+				2A0E588721FECE4B00C633B2 /* AlertFile.swift */,
 			);
 			path = CommonModels;
 			sourceTree = "<group>";
@@ -341,19 +365,27 @@
 				2A4D40D721FB5E2F00F2AC2F /* WarehouseViewControllerExtensions.swift in Sources */,
 				2A4D40D421FB5D9000F2AC2F /* WarehouseViewController.swift in Sources */,
 				2A4D40DA21FB5F0000F2AC2F /* WarehouseTableViewCell.swift in Sources */,
+				2A0E588021FE943A00C633B2 /* IsTokenCreated.swift in Sources */,
+				2A0E587421FD822800C633B2 /* ContryCode.swift in Sources */,
 				2A11989A21F60B170021966E /* LoginViewController.swift in Sources */,
+				2A0E587E21FE912200C633B2 /* LoginModel.swift in Sources */,
 				2A11989C21F60CE70021966E /* IdentityViewController.swift in Sources */,
 				2A11989821F5F8A40021966E /* Request.swift in Sources */,
 				2A4D40C321FB4F3400F2AC2F /* SellerMenuViewController.swift in Sources */,
 				2AD098DD21F702C5003E9DD0 /* BuyerInformationViewController.swift in Sources */,
+				2A0E588621FE9A6600C633B2 /* StoryBoardID.swift in Sources */,
 				2AE5FC3321F982120064B771 /* BuyerInformationViewControllerExtensions.swift in Sources */,
+				2A0E588221FE94CA00C633B2 /* UserDefaultFile.swift in Sources */,
+				2A0E588421FE964300C633B2 /* NVActivityAnamationModel.swift in Sources */,
 				2AE5FC3021F963FB0064B771 /* AddressTableViewCell.swift in Sources */,
+				2A4D410121FC986F00F2AC2F /* Analyzes.swift in Sources */,
 				2A4D409C21F9BB6B00F2AC2F /* LoginViewControllerExtensions.swift in Sources */,
 				2A11987921F5F0AE0021966E /* AppDelegate.swift in Sources */,
 				2A4D40DD21FB623C00F2AC2F /* CreateCommodityViewController.swift in Sources */,
 				2A11988121F5F0AE0021966E /* FacebookLiveStreamingProject.xcdatamodeld in Sources */,
 				2AD0990921F8812D003E9DD0 /* Protocols.swift in Sources */,
 				2A4D40BF21FAD99600F2AC2F /* LoadingActivityView.swift in Sources */,
+				2A0E588821FECE4B00C633B2 /* AlertFile.swift in Sources */,
 				2AE5FC2C21F9627F0064B771 /* PhoneNumberTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -57,7 +57,7 @@
         <!--Identity View Controller-->
         <scene sceneID="9gg-99-vYc">
             <objects>
-                <viewController storyboardIdentifier="IVC" id="Z8T-n9-eBj" customClass="IdentityViewController" customModule="FacebookLiveStreamingProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IdentityViewController" id="Z8T-n9-eBj" customClass="IdentityViewController" customModule="FacebookLiveStreamingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wQW-Mn-wyN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,20 +356,11 @@
                                     <constraint firstItem="nkk-Cs-X69" firstAttribute="centerX" secondItem="1ob-Wo-em5" secondAttribute="centerX" id="fNG-Av-UJW"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7YG-Qc-4vj">
-                                <rect key="frame" x="40" y="68" width="295" height="295"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="7YG-Qc-4vj" secondAttribute="height" multiplier="1:1" id="ODW-5I-aVc"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1ob-Wo-em5" firstAttribute="top" secondItem="yJX-RK-7lA" secondAttribute="top" id="Bph-ZL-YzH"/>
-                            <constraint firstItem="7YG-Qc-4vj" firstAttribute="top" secondItem="1ob-Wo-em5" secondAttribute="bottom" constant="8" id="bL2-vT-se0"/>
                             <constraint firstItem="1ob-Wo-em5" firstAttribute="leading" secondItem="yJX-RK-7lA" secondAttribute="leading" id="eTK-to-klA"/>
-                            <constraint firstItem="7YG-Qc-4vj" firstAttribute="leading" secondItem="yJX-RK-7lA" secondAttribute="leading" constant="40" id="eg0-uH-2hZ"/>
-                            <constraint firstItem="yJX-RK-7lA" firstAttribute="trailing" secondItem="7YG-Qc-4vj" secondAttribute="trailing" constant="40" id="j64-Ty-Ubh"/>
                             <constraint firstItem="0M7-Z9-MCw" firstAttribute="leading" secondItem="yJX-RK-7lA" secondAttribute="leading" constant="16" id="p6m-KY-t5A"/>
                             <constraint firstItem="yJX-RK-7lA" firstAttribute="bottom" secondItem="0M7-Z9-MCw" secondAttribute="bottom" constant="16" id="uUg-so-KvK"/>
                             <constraint firstItem="yJX-RK-7lA" firstAttribute="trailing" secondItem="1ob-Wo-em5" secondAttribute="trailing" id="ua6-pO-TuD"/>

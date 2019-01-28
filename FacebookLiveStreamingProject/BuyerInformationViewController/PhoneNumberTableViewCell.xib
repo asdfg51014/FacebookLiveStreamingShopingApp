@@ -32,13 +32,13 @@
                                 <rect key="frame" x="110.5" y="0.0" width="185.5" height="49.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="國碼" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNM-M0-9uA">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="49.5"/>
+                                        <rect key="frame" x="0.0" y="8" width="46" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手機號碼" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-Gw-nhD">
-                                        <rect key="frame" x="54" y="0.0" width="131.5" height="49.5"/>
+                                        <rect key="frame" x="54" y="8" width="131.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -46,7 +46,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="VNM-M0-9uA" firstAttribute="height" secondItem="ecH-Gw-nhD" secondAttribute="height" id="ELm-xZ-hn3"/>
+                                    <constraint firstAttribute="bottom" secondItem="VNM-M0-9uA" secondAttribute="bottom" constant="8" id="HCw-63-W6O"/>
                                     <constraint firstItem="VNM-M0-9uA" firstAttribute="width" secondItem="ecH-Gw-nhD" secondAttribute="width" multiplier="0.35" id="hh3-if-Pun"/>
+                                    <constraint firstItem="VNM-M0-9uA" firstAttribute="top" secondItem="4CG-3n-HnZ" secondAttribute="top" constant="8" id="j2a-RF-ta6"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -62,6 +64,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="phoneNumberLabel" destination="B4z-gq-oBw" id="de2-nf-NqX"/>
+                <outlet property="userPhoneCodeTextField" destination="VNM-M0-9uA" id="yjm-L6-UHY"/>
                 <outlet property="userPhoneNumberTextField" destination="ecH-Gw-nhD" id="cv1-eX-E6s"/>
             </connections>
             <point key="canvasLocation" x="129.59999999999999" y="152.02398800599701"/>
